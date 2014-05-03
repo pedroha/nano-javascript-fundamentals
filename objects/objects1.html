@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Objects 1</title>
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <h1>Objects 1</h1>
+    <h3>Interact with an object</h3>
+    <div style="font-size: 24pt">
+        Input First Name: <input type="text" id="firstNameInput">
+        <button id="getLastNameButton">Get Last Name</button>
+        <div id="lastNameOutput"></div>
+    </div>
+    
+    <ul>
+        <li>Improve the if/else chain to use an object instead</li>
+        <li>Add keys and values to the object</li>
+        <li>Advanced: Try an object as a value! Nested objects!</li>
+        <li>Advanced: Make the input work accept an input regardless of capitalization</li>
+    </ul>
+    <script>
+        var firstToLastNameMapping = {
+            "Ben": "Sussman",
+            "Pedro": "Ha",
+            "Matt": "Murchison",
+            "Ricky": "Cheng",
+            "Nick": "De Veaux"
+        }
+        
+        $("#getLastNameButton").click(function () {
+            var $output = $("#lastNameOutput");
+            var inputName = $("#firstNameInput").val();
+            
+            // YOUR CODE HERE!
+            if (inputName == "Ben") {
+                $output.text("Sussman");
+            } else if (inputName == "Pedro") {
+                $output.text("Ha");
+            } else {
+                $output.text("I don't recognize that first name!");
+            }
+            // NICE!
+        });
+
+    </script>
+
+</body>
+</html>
